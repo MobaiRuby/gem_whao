@@ -1,10 +1,10 @@
 require "gem_whao/version"
+require "whao/translator"
 
 module GemWhao
   # Your code goes here...
-  class output
-  	def print
-  		p 'this is a print in import gem! ... '
-  	end
+  def self.hi(language = :english)  
+    translator = Translator.new(language)  
+    translator.hi  
   end
 end
